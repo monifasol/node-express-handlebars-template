@@ -3,12 +3,16 @@
 ## Description
 
 Simple boilerplate to start a project in:
-- Node.js as ...
-- Express.js as ...
-- and Handlebars as a views engine.  
+- **Node.js** as ...
+- **Express.js** as ...
+- **Handlebars** as a views engine
+- **SASS** as CSS 
+- **livereload** to see changes live and automatic browser refresh, for a better work flow in development mode.
 
-Valid for a simple, static, no database website. 
-
+This boilerplate is useful to build simple, static, no database websites. 
+<!-- 
+For a more complete one that uses MongoDB as database, see this other boulerplate
+-->
 
 ## How to use it
 
@@ -26,7 +30,7 @@ You should see this:
 
 ## Development Mode, SASS and livereload
 
-- This boilerplate uses sass as a preprocessor
+- This boilerplate uses **SASS** as a preprocessor
 - The SCSS files you want to edit are in ./scss folder
 - ```npm run sass``` to compile your scss into css (final styles compiled in public/css) and watch for any change in the scss files
 - ```npm run watch``` changes for any changes using nodemon. It excludes the public folder since this one is handled by livereload.
