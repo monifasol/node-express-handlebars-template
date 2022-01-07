@@ -1,35 +1,39 @@
-require("dotenv").config();
-const path = require("path");
-const connectLivereload = require("connect-livereload");
-const express = require("express");
+// ES6
+
+import dotenv from 'dotenv';
+dotenv.config();
+import express from "express"
 const app = express();
+import livereload from "livereload";
+import connectLivereload from "connect-livereload";
 
-// middleware
-require("./config")(app);     // sends app as a param in config/index.js
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// register helpers for hbs
-require("./middleware/hbs");
+// views engine setup
+import viewsEngine from "./config/index.js"
+viewsEngine(app)       // I pass app as a variable to /config/index.mjs
 
-
-const livereload = require("livereload");
 const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
+liveReloadServer.watch(`${__dirname}/public`);
 
 // connect-livereload will connect our "live-reload running port" with our app
 app.use(connectLivereload());
 
-// tell the browswer to refresh when the server has gotten up
+// tell the browswer to refresh when the server is up
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
   }, 100);
 });
 
+// register helpers for hbs
+import "./middleware/hbs.js"
 
 // routers
-const indexRouter = require("./routes/index.routes");
+import { indexRouter } from "./routes/index.routes.js"
 app.use("/", indexRouter);
-
 
 // app listens to Port
 const PORT = process.env.PORT || 3001;
@@ -37,4 +41,4 @@ app.listen(PORT, () => {
   console.log(`Server listening on port http://localhost:${PORT}`);
 });
 
-module.exports = app;
+export default app;

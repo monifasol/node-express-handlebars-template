@@ -1,7 +1,15 @@
-const router = require("express").Router();
 
-router.route("/").get( (req, res) => {
+import router from "express"
+const indexRouter = router.Router();
+
+// homepage
+indexRouter.route("/").get( (req, res) => {
     res.render("homepage")
 });
 
-module.exports = router;
+// error route
+indexRouter.route("*").get( (req, res) => {
+    res.render("notfound")
+});
+
+export { indexRouter };

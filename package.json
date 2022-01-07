@@ -4,13 +4,14 @@
     "node": "16",
     "npm": "8"
   },
+  "type": "module",
   "version": "1.0.0",
   "description": "Boilerplate for starting an app in Node, Express, and Handlebars",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "sass": "sass --watch scss/styles.scss public/css/styles.css",
-    "watch": "nodemon --ext js,mjs,hbs,css,html --ignore public",
+    "watch": "nodemon --ext js,mjs,hbs,css,html",
     "dev": "npm run sass & npm run watch"
   },
   "repository": {

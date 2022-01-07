@@ -1,4 +1,4 @@
-const hbs = require('hbs')
+import hbs from "hbs"
 
 hbs.registerHelper('ifIn', function(elem, list, options) {
 
