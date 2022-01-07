@@ -21,7 +21,7 @@ Valid for a simple, static, no database website.
 
 You should see this:
 
-![boilerplate is ready](http://url/to/img.png)
+![boilerplate is ready](https://raw.githubusercontent.com/monifasol/node-express-handlebars-template/master/public/images/boilerplate-ready.png)
 
 
 ## Development Mode, SASS and livereload
