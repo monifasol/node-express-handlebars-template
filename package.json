@@ -1,0 +1,39 @@
+{
+  "name": "node-express-handlebars-template",
+  "engines": {
+    "node": "16",
+    "npm": "8"
+  },
+  "version": "1.0.0",
+  "description": "Boilerplate for starting an app in Node, Express, and Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "sass": "sass --watch scss/styles.scss public/css/styles.css",
+    "watch": "nodemon --ext js,mjs,hbs,css,html --ignore public",
+    "dev": "npm run sass & npm run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monifasol/node-express-handlebars-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monifasol/node-express-handlebars-template/issues"
+  },
+  "homepage": "https://github.com/monifasol/node-express-handlebars-template#readme",
+  "dependencies": {
+    "dotenv": "^10",
+    "express": "^4",
+    "connect-livereload": "^0",
+    "livereload": "^0",
+    "hbs": "^4",
+    "path": "^0",
+    "sass": "^1"
+  },
+  "devDependencies": {
+    "nodemon": "^2"
+  }
+}
