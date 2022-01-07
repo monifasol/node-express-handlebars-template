@@ -3,11 +3,11 @@
 ## Description
 
 Simple boilerplate to start a project in:
-- **Node.js** as ...
-- **Express.js** as ...
+- **Node.js** as a Javascript server
+- **Express.js** as a web application framework for Node
 - **Handlebars** as a views engine
-- **SASS** as CSS 
-- **livereload** to see changes live and automatic browser refresh, for a better work flow in development mode.
+- **SASS** as CSS preprocessor
+- **livereload** together with SASS, to see changes live, automatic compilations, and browser refresh, for a better work flow in development mode.
 
 This boilerplate is useful to build simple, static, no database websites. 
 <!-- 
