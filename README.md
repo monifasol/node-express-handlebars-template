@@ -39,3 +39,8 @@ This will start the application and WATCH for any change. In case a scss file ch
 reload the browser using livereload. 
 - For livereload configuration, check .middleware/livereload.js
 
+
+## Developer
+
+[Monica Saiz](https://www.monicasaiz.com)
+[Monica's Github](https://github.com/monifasol)
