@@ -9,7 +9,10 @@ Simple boilerplate to start a project in:
 - **SASS** as CSS preprocessor
 - **livereload** together with SASS, to see changes live, automatic compilations, and browser refresh, for a better work flow in development mode.
 
-This boilerplate is useful to build simple, static, no database websites. 
+This boilerplate is useful to build simple, static, no database websites.  
+
+Each file in the project uses ES6 syntax, including the server files. Note the entry "type":"module" in package.json, which tells Node that the main file is a Javascript Module.  
+
 <!-- 
 For a more complete one that uses MongoDB as database, see this other boulerplate
 -->
